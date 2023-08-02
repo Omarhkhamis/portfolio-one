@@ -3,6 +3,7 @@
   align-items: center;
   column-gap: 1.875rem;
   margin-bottom: 2.5rem;
+  flex-wrap: wrap;
 }
 
 .work__item {
@@ -95,4 +96,31 @@
 .work__card:hover .work__category {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media screen and (max-width: 1024px) {
+  .work__filters {
+    justify-content: center;
+  }
+  .work__container {
+    grid-template-columns: repeat(2, 330px);
+    justify-content: center;
+    row-gap: 1.875rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .work__container {
+    grid-template-columns: 310px;
+  }
+
+  .work__filters {
+    row-gap: 0.25rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .work__container {
+    grid-template-columns: 1fr;
+  }
 }
